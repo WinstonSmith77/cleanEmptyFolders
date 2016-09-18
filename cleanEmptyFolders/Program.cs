@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.VisualBasic.FileIO;
+using SearchOption = System.IO.SearchOption;
 
 namespace cleanEmptyFolders
 {
@@ -19,7 +21,7 @@ namespace cleanEmptyFolders
             {
                 if (Directory.Exists(folder))
                 {
-                    Directory.Delete(folder, true);
+                    FileSystem.DeleteDirectory(folder, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin);
                 }
             }
         }
