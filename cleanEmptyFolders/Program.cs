@@ -26,9 +26,9 @@ namespace cleanEmptyFolders
             }
         }
 
-        private static bool IsEmpty(string item)
+        private static bool IsEmpty(string folder)
         {
-            var allFiles = Directory.GetFiles(item, "*", SearchOption.AllDirectories);
+            var allFiles = Directory.GetFiles(folder, "*", SearchOption.AllDirectories);
 
             return !allFiles.Any();
         }
